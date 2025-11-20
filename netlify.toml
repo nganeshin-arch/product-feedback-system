@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm run build --workspace=shared && npm run build --workspace=backend && npm run build --workspace=web"
+  command = "npm install && npm run build --workspace=packages/shared && npm run build --workspace=packages/backend && npm run build --workspace=packages/web"
   publish = "packages/web/dist"
   functions = "packages/backend/dist/netlify/functions"
 
