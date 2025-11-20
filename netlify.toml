@@ -1,5 +1,5 @@
 [build]
-  command = "npm install && npm --workspaces run build"
+  command = "npm ci && npm run build"
   publish = "packages/web/dist"
   functions = "packages/backend/dist/netlify/functions"
 
