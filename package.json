@@ -10,7 +10,7 @@
     "dev": "npm run dev --workspace=web",
     "dev:web": "npm run dev --workspace=web",
     "dev:mobile": "npm run android --workspace=mobile",
-    "build": "npm run build --workspace=packages/shared && npm run build --workspace=packages/backend && npm run build --workspace=packages/web",
+    "build": "npm run build --workspace=@feedback-system/shared && npm run build --workspace=@feedback-system/backend && npm run build --workspace=@feedback-system/web",
     "build:web": "npm run build --workspace=web",
     "build:mobile": "npm run build --workspace=mobile",
     "lint": "npm run lint --workspaces",
