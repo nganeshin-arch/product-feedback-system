@@ -288,3 +288,5 @@ For issues and questions:
 ---
 
 Made with ❤️ for product feedback management
+
+<!-- Build trigger: 2025-11-21 -->
