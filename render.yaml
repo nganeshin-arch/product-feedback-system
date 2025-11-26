@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: product-feedback-backend
+    runtime: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && node scripts/init-db.js && npm run build
+    startCommand: node dist/index.js
+    rootDir: packages/backend
+    envVars:
+      - key: NODE_VERSION
+        value: 18.20.0
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: DATABASE_PATH
+        value: /opt/render/project/src/database/feedback.db
+      - key: JWT_SECRET
+        generateValue: true
+      - key: JWT_REFRESH_SECRET
+        generateValue: true
