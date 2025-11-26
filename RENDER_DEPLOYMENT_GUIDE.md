@@ -45,14 +45,14 @@ Fill in the following settings:
 - **Runtime**: `Node`
 - **Build Command**: 
   ```
-  cd ../.. && npm install && cd packages/shared && npm run build && cd ../backend && npm install && node scripts/init-db.js && npm run build
+  cd ../.. && npm install && npm run build --workspace=@feedback-system/shared && cd packages/backend && node scripts/init-db.js && npm run build
   ```
 - **Start Command**:
   ```
   node dist/index.js
   ```
 
-**Note**: The build command builds the shared package first to ensure TypeScript types are available for the backend.
+**Note**: The build command installs all workspace dependencies from the root, then builds the shared package first to ensure TypeScript types are available for the backend.
 
 ### Instance Type
 - Select **"Free"** (perfect for testing)
